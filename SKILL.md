@@ -36,6 +36,8 @@ python scripts/read-note.py --title "Note"
 python scripts/delete-note.py --title "Note"
 ```
 
+> **Note:** The `--title` is automatically formatted as an `<h1>` header at the top of the note. Only include body content in `--body`.
+
 ## HTML Reference
 
 | Element | HTML | Example |
