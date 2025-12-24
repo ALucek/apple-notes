@@ -11,7 +11,7 @@ metadata:
 
 ## Overview
 
-Scripts to interact with Apple Notes. These are scoped to an automatically created `agent-notes` folder within the User's Apple Notes application. Apple notes supports various HTML components, those of which are listed in the HTML reference section. There are some limitations with programatically using Apple Notes, listed in the limitations section.
+Tools to interact with Apple Notes. Notes are scoped to an automatically created `agent-notes` folder. Notes are formatted using HTML—supported elements are listed below.
 
 ## When to Use
 
