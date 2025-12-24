@@ -1,26 +1,41 @@
-# Apple Notes Skill
+# Apple Notes Plugin
 
-An agent skill for interacting with Apple Notes. Enables LLMs to persistently store and retrieve information using the native Notes app on macOS.
+A Claude Code plugin for interacting with Apple Notes. Enables persistent storage and retrieval of information using the native Notes app on macOS.
+
+## Installation
+
+Add this marketplace to Claude Code:
+
+```
+/plugin marketplace add ALucek/apple-notes
+```
+
+Then install the plugin:
+
+```
+/plugin install apple-notes@apple-notes-marketplace
+```
 
 ## What It Does
 
-Provides CRUD operations for Apple Notes, scoped to an `agent-notes` folder. Notes persist across sessions and sync via iCloud.
+Provides CRUD operations for Apple Notes, scoped to an `agent-notes` folder:
 
-## Usage
+- **List** all notes in the folder
+- **Create** new notes with HTML formatting
+- **Read** note content as HTML
+- **Delete** notes by title
 
-See [SKILL.md](SKILL.md) for full documentation including HTML formatting reference.
-
-```bash
-python scripts/list-notes.py                              # List all notes
-python scripts/create-note.py --title "X" --body "<html>" # Create note
-python scripts/read-note.py --title "X"                   # Read note (HTML)
-python scripts/delete-note.py --title "X"                 # Delete note
-```
+Notes persist across sessions and sync via iCloud.
 
 ## Requirements
 
 - macOS with Apple Notes
 - Python 3
+- Claude Code
+
+## Documentation
+
+See the [SKILL.md](plugins/apple-notes/skills/apple-notes/SKILL.md) for full usage documentation including HTML formatting reference.
 
 ## License
 

@@ -4,7 +4,7 @@ description: Interact with the Apple Notes app. CRUD operations for persistent s
 license: MIT License
 metadata:
   author: "lucek.ai"
-  version: "1.0"
+  version: "1.0.0"
 ---
 
 # Apple Notes Creation & Editing
@@ -70,3 +70,4 @@ The following capabilities of Apple Notes are not available:
 - **Highlights** - Stored internally by Apple Notes
 - **Images** - Technically possible (base64) but impractical for LLM use
 - **Attachments** - Cannot be added programmatically
+

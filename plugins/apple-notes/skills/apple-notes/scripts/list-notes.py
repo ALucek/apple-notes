@@ -26,3 +26,4 @@ end tell
 
 result = subprocess.run(["osascript", "-e", script], capture_output=True, text=True)
 print(result.stdout.strip() or "No notes found.")
+

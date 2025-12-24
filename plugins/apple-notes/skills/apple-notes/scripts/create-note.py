@@ -37,3 +37,4 @@ end tell
 
 result = subprocess.run(["osascript", "-e", script], capture_output=True, text=True)
 print(result.stdout.strip() if result.returncode == 0 else f"Error: {result.stderr}")
+

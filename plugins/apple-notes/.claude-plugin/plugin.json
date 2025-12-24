@@ -1,0 +1,6 @@
+{
+  "name": "apple-notes",
+  "description": "Interact with Apple Notes app. CRUD operations for persistent storage of thoughts, data, and information across sessions.",
+  "version": "1.0.0"
+}
+
