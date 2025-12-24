@@ -19,7 +19,7 @@ FOLDER = "agent-notes"
 
 parser = argparse.ArgumentParser(description="Create a note in agent-notes folder")
 parser.add_argument("--title", required=True, help="Note title")
-parser.add_argument("--body", required=True, help="Note body (HTML supported)")
+parser.add_argument("--body", required=True, help="Note body (HTML Format)")
 args = parser.parse_args()
 
 title = args.title.replace('"', '\\"')
