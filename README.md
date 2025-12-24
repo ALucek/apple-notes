@@ -39,4 +39,4 @@ See the [SKILL.md](plugins/apple-notes/skills/apple-notes/SKILL.md) for full usa
 
 ## License
 
-MIT
+[MIT](LICENSE)
