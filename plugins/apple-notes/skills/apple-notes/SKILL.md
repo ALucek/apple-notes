@@ -63,11 +63,8 @@ python scripts/delete-note.py --title "Note"
 
 ## Limitations
 
-The following capabilities of Apple Notes are not available:
-
 - **Checklists** - Stored internally, checkbox state not accessible (renders as regular bullet list)
 - **Links** - Stripped on save
 - **Highlights** - Stored internally by Apple Notes
 - **Images** - Technically possible (base64) but impractical for LLM use
 - **Attachments** - Cannot be added programmatically
-
