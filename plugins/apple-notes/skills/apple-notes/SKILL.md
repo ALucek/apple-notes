@@ -31,12 +31,18 @@ Tools to interact with Apple Notes. Notes are scoped to an automatically created
 
 ```bash
 python scripts/list-notes.py
-python scripts/create-note.py --title "Note" --body "<div>Content</div>"
+echo "<div>Content</div>" | python scripts/create-note.py --title "Note"
 python scripts/read-note.py --title "Note"
 python scripts/delete-note.py --title "Note"
 ```
 
-> **Note:** The `--title` is automatically formatted as an `<h1>` header at the top of the note. Only include body content in `--body`.
+> **Note:** The `--title` is automatically formatted as an `<h1>` header. Body content is piped via stdin.
+
+### Example
+
+```bash
+echo "<div><b>Meeting Notes</b></div><ul><li>Discuss roadmap</li><li>Review budget</li></ul>" | python scripts/create-note.py --title "Weekly Sync"
+```
 
 ## HTML Reference
 
