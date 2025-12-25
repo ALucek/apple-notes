@@ -30,19 +30,22 @@ Tools to interact with Apple Notes. Notes are scoped to an automatically created
 ## Usage
 
 ```bash
+# List notes
 python scripts/list-notes.py
-echo "<div>Content</div>" | python scripts/create-note.py --title "Note"
-python scripts/read-note.py --title "Note"
-python scripts/delete-note.py --title "Note"
+
+# Create note (heredoc for reliable input)
+cat << 'EOF' | python scripts/create-note.py --title "My Note"
+<div>Content here</div>
+EOF
+
+# Read note
+python scripts/read-note.py --title "My Note"
+
+# Delete note
+python scripts/delete-note.py --title "My Note"
 ```
 
-> **Note:** The `--title` is automatically formatted as an `<h1>` header. Body content is piped via stdin.
-
-### Example
-
-```bash
-echo "<div><b>Meeting Notes</b></div><ul><li>Discuss roadmap</li><li>Review budget</li></ul>" | python scripts/create-note.py --title "Weekly Sync"
-```
+> **Note:** The `--title` is automatically formatted as an `<h1>` header. Body content is piped via stdin using heredoc (`<< 'EOF'`) to avoid shell escaping issues.
 
 ## HTML Reference
 

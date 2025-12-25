@@ -10,7 +10,9 @@ Arguments:
     Body content is read from stdin (HTML format)
 
 Usage:
-    echo "<div>Content</div>" | python create-note.py --title "My Note"
+    cat << 'EOF' | python create-note.py --title "My Note"
+    <div>Content here</div>
+    EOF
 """
 import argparse
 import subprocess
@@ -22,9 +24,13 @@ parser = argparse.ArgumentParser(description="Create a note in agent-notes folde
 parser.add_argument("--title", required=True, help="Note title")
 args = parser.parse_args()
 
+def escape_applescript(s):
+    """Escape string for AppleScript double-quoted string."""
+    return s.replace('\\', '\\\\').replace('"', '\\"')
+
 body = sys.stdin.read().strip()
-title = args.title.replace('"', '\\"')
-body = body.replace('"', '\\"')
+title = escape_applescript(args.title)
+body = escape_applescript(body)
 
 script = f'''
 tell application "Notes"

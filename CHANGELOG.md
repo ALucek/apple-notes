@@ -1,9 +1,18 @@
 # Changelog
 
+## [1.2.0] - 2025-12-25
+
+### Changed
+- Standardized on heredoc (`<< 'EOF'`) for reliable input handling
+- Updated docs and examples to use heredoc pattern
+
 ## [1.1.0] - 2025-12-25
 
 ### Changed
 - `create-note.py` now reads body content from stdin to avoid shell escaping issues
+
+### Fixed
+- Improved AppleScript escaping for special characters (backslashes, quotes)
 
 ## [1.0.0] - 2025-12-24
 
