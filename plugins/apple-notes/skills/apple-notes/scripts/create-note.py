@@ -29,6 +29,10 @@ def escape_applescript(s):
     return s.replace('\\', '\\\\').replace('"', '\\"')
 
 body = sys.stdin.read().strip()
+
+# Remove common shell escape artifacts (like \! from bash history expansion)
+body = body.replace('\\!', '!')
+
 title = escape_applescript(args.title)
 body = escape_applescript(body)
 

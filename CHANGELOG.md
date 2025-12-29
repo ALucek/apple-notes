@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.2.1] - 2025-12-29
+
+### Changed
+- Exclamation escaping handling with create note 
+
 ## [1.2.0] - 2025-12-25
 
 ### Changed
